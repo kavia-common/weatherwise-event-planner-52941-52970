@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ocean Professional Theme Variables */
+:root {
+  --color-primary: #2563EB;
+  --color-secondary: #F59E0B;
+  --color-success: #F59E0B;
+  --color-error: #EF4444;
+  --color-bg: #f9fafb;
+  --color-surface: #ffffff;
+  --color-text: #111827;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Components */
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors;
+  @apply shadow-subtle;
+}
+.btn-primary {
+  @apply bg-primary text-white hover:bg-blue-600;
+}
+.btn-secondary {
+  @apply bg-secondary text-white hover:bg-amber-600;
+}
+.card {
+  @apply bg-surface rounded-xl shadow-subtle border border-gray-100;
+}
+.section {
+  @apply py-12 md:py-16;
+}
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+.nav-link {
+  @apply text-text/80 hover:text-text transition-colors;
+}
+.badge {
+  @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium;
+}
+.badge-success { @apply bg-secondary/10 text-secondary; }
+.badge-error { @apply bg-error/10 text-error; }
